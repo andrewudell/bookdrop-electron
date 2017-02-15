@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookdrop</title>
+    <link rel="stylesheet" href="./css/app.css">
+  </head>
+  <body>
+    <div class="main">
+        <div id="bookRecs">
+          <h2>Bookdrop App...loading</h2>
+        </div> <!-- Recs -->
+    </div> <!-- Main -->
+    <script type="text/javascript">
+      var eRequire = require;
+      var dirName = __dirname;
+      var dataLocation = require('path').resolve(__dirname, '..', 'data', 'data.json');
+    </script>
+    <script src="js/render.js"></script>
+  </body>
+</html>
