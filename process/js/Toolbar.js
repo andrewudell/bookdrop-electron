@@ -13,12 +13,10 @@ var Toolbar = React.createClass({
     return(
       <nav className="nav-group">
         <a className="nav-group-item" onClick={this.createBook}>
-          <span className="icon icon-plus-circled"></span>
-          <p>Add a book</p>
+          <span className="glyphicon glyphicon-plus"></span>  Add a book
         </a>
         <a className="nav-group-item" onClick={this.toggleAbout}>
-          <span className="icon icon-help-circled"></span>
-          <p>About Bookdrop</p>
+          <span className="glyphicon glyphicon-book"></span>  About Bookdrop
         </a>
       </nav>
     ) //return

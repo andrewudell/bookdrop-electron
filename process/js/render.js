@@ -14,7 +14,7 @@ var Toolbar = require('./Toolbar');
 var AddBook = require('./AddBook');
 var HeaderNav = require('./HeaderNav');
 var Footer = require('./Footer');
-
+var Share = require('./Share');
 
 var MainInterface = React.createClass({
   getInitialState: function() {
@@ -130,8 +130,13 @@ var MainInterface = React.createClass({
             handleToggle = {this.toggleBookDisplay}
             addBook = {this.addItem}
           />
-          <div>
-            {filteredBooks}
+          <div className="main">
+            <div>
+              <Share />
+            </div>
+            <div>
+              {filteredBooks}
+            </div>
           </div>
         </div>
       </div>

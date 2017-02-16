@@ -6,13 +6,16 @@ var BookList = React.createClass({
   },
   render: function() {
     return(
-      <div className = "book-list">
-        <div className = "book-item book-title">
-          {this.props.singleItem.bookTitle}
-          <span className="pull-right icon icon-cancel-circled delete" onClick={this.handleDelete}></span>
+      <div>
+        <div className = "book-list">
+          <div className = "book-item book-title">
+            {this.props.singleItem.bookTitle}
+            <span className="pull-right glyphicon glyphicon-remove delete" onClick={this.handleDelete}></span>
+          </div>
+          <div className = "book-item book-author">By {this.props.singleItem.bookAuthor}</div>
+          <div className = "book-item book-review">Review: {this.props.singleItem.bookReview}</div>
+          <hr />
         </div>
-        <div className = "book-item book-author">By {this.props.singleItem.bookAuthor}</div>
-        <div className = "book-item book-revew">Review: {this.props.singleItem.bookReview}</div>
       </div>
     )
   }
