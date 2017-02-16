@@ -9,8 +9,8 @@ app.on('ready', function() {
     var appWindow;
 
     appWindow = new BrowserWindow({
-        width: 672,
-        height: 460
+        width: 1280,
+        height: 800
     });
     appWindow.loadURL('file://' + __dirname + '/index.html');
 

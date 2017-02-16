@@ -14,130 +14,23 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  background-image: url("../images/wisdompetlogo.svg");
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: 10px;
 }
 
-@media only screen
-  and (max-width: 768px) {
-  .navbar-header {
-    display: none;
-  }
-  .navbar {
-    background-image: none;
-  }
-}
-
-.navbar-default .navbar-brand {
-  color: white;
-  padding-left: 60px;
-}
-
-.navbar-default {
-  background-color: #194759;
-  border: none;
-}
-
 .navbar-brand {
   font-weight: bold;
+  padding-left: -40px;
+  color: #000000;
 }
-
-.navbar-form {
-  border: none;
-  box-shadow: none;
-}
-
-.navbar-form .form-control {
-    border: none;
-    border-radius: 4px;
-    box-shadow: none;
-}
-
-.navbar-form .btn-info {
-  background-color: #3E8C84;
-  border-color: #2B746B;
-}
-
-.navbar-form .btn-info:focus,
-.navbar-form .btn-info.focus {
-  background-color: #2B746B;
-  border-color: #286D64;
-}
-
-.main {
-  background: white;
-}
-
-/** Toolbar **/
 
 .interface {
   display: flex;
-  background: #D8F2F0;
+  background: white;
 }
 
-.toolbar {
-  background-color: #296B73;
-  min-width: 200px;
-  color: white;
-  font-size: 1.1em;
-  height: 100vh;
-  padding-top: 10px;
-}
-
-@media only screen
-  and (max-width: 768px) {
-  .toolbar {
-    min-width: 55px;
-  }
-
-}
-
-.toolbar-item {
-  cursor: pointer;
-  padding: 10px 20px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.toolbar-item:hover {
-  background-color: #133748;
-}
-
-.toolbar-item-button {
-  margin-right:10px;
-}
-
-@media only screen and (max-width: 768px) {
-  .toolbar-item-text {
-    display: none;
-  }
-
-  .toolbar-item-button {
-    font-size: 20px;
-  }
-}
-
-/**  Interface Styles **/
-
-.toolbar-addheading {
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;          /* Likely future */
-}
-
-.appointments {
-  margin-top: 15px;
-}
-
-.appointments .appointments-headline {
-  margin-bottom: 10px;
-  color: #174152;
-}
-
-.item-list {
+.book-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -145,56 +38,67 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 120%;
 }
 
-.item-list .media {
-  margin-top: 0;
-}
-
-.item-list .pet-item {
+.book-list .book-item {
   padding: 10px;
 }
 
-.item-list .pet-item:nth-child(2n) {
-    background: rgba(255,255,255,.5);
-    border-radius: 5px;
-}
 
-.item-list .pet-item:last-child {
-  border-bottom: none;
-}
-
-.item-list .pet-item .pet-delete {
-  display: none;
-  opacity: 0;
-  transition: all 1s;
-}
-
-
-.item-list  .pet-item:hover .pet-delete {
-  display: block;
-  opacity: 1;
-}
-
-
-.item-list .pet-name {
+.book-list .book-title {
   font-weight: bold;
-  color: #296B73;
   font-size: 1.3em;
 }
-.item-list .apt-notes {
-  font-style: italic;
+
+.nav-group {
+  background-color: #dcdfe1;
 }
 
-.item-list .label-item {
-  font-weight: bold;
-  color: #D03B3B;
-  padding-right: 10px;
+.nav-group a {
+  text-decoration: none;
 }
 
-.item-list .apt-date {
-  font-style: italic;
+.nav-group-item:hover {
+  background-color: #446CB3;
 }
 
-#page-info {
+.nav-group-item p {
+  color: black;
+}
+
+.book-item .delete {
+  visibility: hidden;
+  float: right;
+}
+
+.book-item:hover .delete {
+  visibility: visible;
+  float: right;
+}
+
+.nav-group {
+  font-size: 14px;
+  min-width: 200px;
+  font-size: 1.1em;
+  height: 100vh;
+}
+
+.nav-group-item {
+  padding: 2px 10px 2px 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen
+  and (max-width: 768px) {
+  .navbar-header {
+    display: none;
+  }
+}
+
+/*#page-info {
   background: transparent;
   color: white;
   display: flex;
@@ -250,4 +154,4 @@ h1, h2, h3, h4, h5, h6 {
 #page-info img {
   width: 100px;
   opacity: .8;
-}
+}*/

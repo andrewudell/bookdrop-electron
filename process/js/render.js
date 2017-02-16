@@ -13,6 +13,7 @@ var BookList = require('./BookList');
 var Toolbar = require('./Toolbar');
 var AddBook = require('./AddBook');
 var HeaderNav = require('./HeaderNav');
+var Footer = require('./Footer');
 
 
 var MainInterface = React.createClass({
@@ -130,7 +131,6 @@ var MainInterface = React.createClass({
             addBook = {this.addItem}
           />
           <div>
-            <h2>Bookdrop Application</h2>
             {filteredBooks}
           </div>
         </div>

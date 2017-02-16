@@ -17,11 +17,13 @@ var HeaderNav = React.createClass({
     return (
       <nav className="navigation navbar navbar-default">
         <div className="container-fluid">
-          <div className="navbar-header"><a className="navbar-brand" href="#">Bookdrop</a></div>
-          <div className="navbar-form navbar-right search-appointments">
+          <div className="navbar-header">
+            <a className="navbar-brand" href="#">Bookdrop</a>
+          </div>
+          <div className="navbar-form navbar-right search-books">
               <div className="input-group">
-                <input id="SearchApts" onChange={this.handleSearch} placeholder="Search" autoFocus type="text" className="form-control" aria-label="Search Books" />
-                <div className="input-group-btn">
+                <input id="SearchBooks" onChange={this.handleSearch} placeholder="Search" className="form-control" type="text" placeholder="Search for books" aria-label="Search Books" />
+                <span className="input-group-btn">
                   <button type="button" className="btn btn-info dropdown-toggle"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by: <span className="caret"></span></button>
                     <ul className="dropdown-menu dropdown-menu-right">
@@ -32,7 +34,7 @@ var HeaderNav = React.createClass({
                        <li><a href="#" id="asc" onClick={this.handleOrder}>Asc {(this.props.orderDir === 'asc') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
                        <li><a href="#" id="desc" onClick={this.handleOrder}>Desc {(this.props.orderDir === 'desc') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
                     </ul>
-                </div>{/* input-group-btn */}
+                </span>{/* input-group-btn */}
             </div>{/* input-group */}
           </div>{/* navbar-form */}
         </div>{/* container-fluid */}
@@ -42,3 +44,33 @@ var HeaderNav = React.createClass({
 }); // HeaderNav
 
 module.exports = HeaderNav;
+
+
+
+// render: function() {
+//   return (
+//     <nav className="navigation navbar navbar-default">
+//       <div className="container-fluid">
+//         <div className="navbar-header"><a className="navbar-brand" href="#">Bookdrop</a></div>
+//         <div className="navbar-form navbar-right search-appointments">
+//             <div className="input-group">
+//               <input id="SearchApts" onChange={this.handleSearch} placeholder="Search" autoFocus type="text" className="form-control" aria-label="Search Books" />
+//               <div className="input-group-btn">
+//                 <button type="button" className="btn btn-info dropdown-toggle"
+//                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by: <span className="caret"></span></button>
+//                   <ul className="dropdown-menu dropdown-menu-right">
+//                     <li><a href="#" id="bookTitle" onClick={this.handleSort}>Title {(this.props.orderBy === 'bookTitle') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
+//                      <li><a href="#" id="bookAuthor" onClick={this.handleSort}>Author {(this.props.orderBy === 'bookAuthor') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
+//                      <li><a href="#" id="bookReview" onClick={this.handleSort}>Review  {(this.props.orderBy === 'bookReview') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
+//                      <li role="separator" className="divider"></li>
+//                      <li><a href="#" id="asc" onClick={this.handleOrder}>Asc {(this.props.orderDir === 'asc') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
+//                      <li><a href="#" id="desc" onClick={this.handleOrder}>Desc {(this.props.orderDir === 'desc') ? <span className="glyphicon glyphicon-ok"></span>:null}</a></li>
+//                   </ul>
+//               </div>{/* input-group-btn */}
+//           </div>{/* input-group */}
+//         </div>{/* navbar-form */}
+//       </div>{/* container-fluid */}
+//     </nav>
+//   ) // return
+// } // render
+// }); // HeaderNav

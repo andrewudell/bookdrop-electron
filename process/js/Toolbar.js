@@ -11,18 +11,18 @@ var Toolbar = React.createClass({
 
   render: function() {
     return(
-      <div className="toolbar">
-        <div className="toolbar-item" onClick={this.createBook}>
-          <span className="toolbar-item-button glyphicon glyphicon-plus-sign"></span>
-          <span className="toolbar-item-text">Add Book</span>
-        </div>
-        <div className="toolbar-item" onClick={this.toggleAbout}>
-          <span className="toolbar-item-button glyphicon glyphicon-question-sign"></span>
-          <span className="toolbar-item-text">About this app</span>
-        </div>
-      </div>
+      <nav className="nav-group">
+        <a className="nav-group-item" onClick={this.createBook}>
+          <span className="icon icon-plus-circled"></span>
+          <p>Add a book</p>
+        </a>
+        <a className="nav-group-item" onClick={this.toggleAbout}>
+          <span className="icon icon-help-circled"></span>
+          <p>About Bookdrop</p>
+        </a>
+      </nav>
     ) //return
   } //render
-}); //Toolbar
+  }); //Toolbar
 
-module.exports = Toolbar;
+  module.exports = Toolbar;
